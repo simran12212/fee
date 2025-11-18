@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  The custom component classes using `@apply` caused build errors
+  (unknown utility classes). Commented out for now — you can re-add
+  them later after confirming which Tailwind utilities exist in your
+  Tailwind version or by upgrading Tailwind.
+
+  Example replacements can be applied directly in JSX using utility
+  classes (recommended) instead of `@apply`.
+*/
+
+@layer components {
+  .btn-primary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors duration-300;
+  }
+  
+  .glass-effect {
+    @apply bg-black bg-opacity-60 backdrop-blur-md;
+  }
+  
+  .event-card {
+    @apply bg-gray-800 rounded-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2;
+  }
+}
